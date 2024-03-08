@@ -5,9 +5,9 @@ public class Q1{
     public static void main(String[] args) {
         Scanner input =new Scanner(System.in);
         int length ,breadth ;
-        System.out.print("Enter the Length");
+        System.out.print("Enter the Length : ");
         length =input.nextInt();
-        System.out.print("Enter the Breadth");
+        System.out.print("Enter the Breadth: ");
         breadth=input.nextInt();
 
         if(length== breadth){
@@ -16,5 +16,6 @@ public class Q1{
         }else{
             System.out.println("The length and breath are not equal so it is not squal");
         }
+        input.close();
     }
 }
