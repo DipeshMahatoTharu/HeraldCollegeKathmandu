@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="all-weather-main-file">
+        <h1>Weather App</h1>
+        <!-- Search form -->
+        <div class="search-container">
+            <label for="city-input-field">Enter City:</label>
+            <input type="text" id="city-input-field" placeholder="Enter city name">
+            <button id="submit-btn">Submit</button>
+        </div>
+    
+        <!-- Current Weather section -->
+        <div class="current-weather">
+            <h2>Current Weather</h2>
+            <div class="weather-details">
+                <div class="weather-info">
+                    <!-- City Name -->
+                    <div class="print">City Name</div>
+                    <h3 id="city-header"></h3>
+        
+                    <!-- Weather Icon -->
+                    <div class="print">Weather Icon</div>
+                    <img id="weather-icon">
+        
+                    <!-- Temperature -->
+                    <div class="print">Temperature</div>
+                    <p id="temperature"></p>
+        
+                    <!-- Description -->
+                    <div class="print">Description</div>
+                    <p id="description"></p>
+        
+                    <!-- Status -->
+                    <div class="print">Status</div>
+                    <p id="main"></p>
+        
+                    <!-- Humidity -->
+                    <div class="print">Humidity</div>
+                    <p id="humidity"></p>
+        
+                    <!-- Wind -->
+                    <div class="print">Wind</div>
+                    <p id="wind"></p>
+        
+                    <!-- Pressure -->
+                    <div class="print">Pressure</div>
+                    <p id="pressure"></p>
+        
+                    <!-- Date and Time -->
+                    <div class="print">DateTime</div>
+                    <p id="datetime"></p>  
+                    
+                    <!-- Button to get default weather -->
+                   <button id="get-weather-btn">Get Default Weather</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Historical Weather section -->
+        <h2>Historical Weather</h2>
+        <table class="weather-history-table">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Temperature</th>
+                    <th>Description</th>
+                    <th>Main</th>
+                    <th>Humidity</th>
+                    <th>Wind</th>
+                    <th>Pressure</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be added dynamically by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script  src="./script.js">
+        // JavaScript code will go here
+    </script>
+</body>
+</html>

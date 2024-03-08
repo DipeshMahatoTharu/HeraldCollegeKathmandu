@@ -1,0 +1,106 @@
+
+/* Dipesh Mahato Tharu  */
+ /* 2408059 */
+body {
+  font-family: 'Courier New';
+  background-image:url(https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg);
+  background-repeat:no-repeat ;
+  background-size:cover;
+}
+
+buttoner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px 15px;
+}
+
+.btn {
+  font-family: 'Courier New';
+  padding: 10px 25px;
+  font-size: 1rem;
+  margin: 10px;
+  background: rgb(84, 84, 184);
+  color: #fff;
+  border-radius: 100px;
+  border:black;
+}
+
+main {
+  flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.city {
+  color: #FFF;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.date {
+  color: #FFF;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.temp {
+  color: #FFF;
+  font-size: 50px;
+  margin: 15px;
+}
+
+.weather {
+  color: #FFF;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hi-low {
+  color: #FFF;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.wind {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.print {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+/* Style for the input field */
+#cityInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Style for the search button */
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for the search button on hover */
+.btn:hover {
+  background-color: #0056b3;
+}

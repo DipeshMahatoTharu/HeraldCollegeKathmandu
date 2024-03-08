@@ -1,0 +1,137 @@
+/* General styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the main container */
+.all-weather-main-file {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with opacity */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    max-width: 800px; /* Maximum width for better readability */
+    margin: 50px auto; 
+}
+
+/* Styling for heading elements */
+h1, h2, h3 {
+    color: #333; 
+    text-align: center; 
+}
+
+/* Styling for the search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for labels */
+label {
+    color: #333; 
+    margin-right: 10px;
+}
+
+/* Styling for text input */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 60%; /* Make input field responsive */
+}
+
+/* Styling for buttons */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+.current-weather {
+    margin-bottom: 30px;
+}
+
+/* Styling for weather details */
+.weather-details {
+    background-color: #f9f9f9; 
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for weather information */
+.weather-info {
+    text-align: center;
+}
+
+/* Styling for printed text */
+.print {
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+/* Styling for weather history table */
+.weather-history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.weather-history-table th, .weather-history-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
+    text-align: center;
+}
+
+.weather-history-table th {
+    background-color: #f2f2f2; 
+    color: #333; 
+}
+
+.weather-history-table td {
+    background-color: #fff; 
+    color: #333; 
+}
+
+/* Styling for weather icon */
+#weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+/* Styling for specific elements with IDs */
+#city-header,
+#temperature,
+#description,
+#main,
+#humidity,
+#wind,
+#pressure,
+#datetime {
+    color: #ff6347; 
+    font-weight: bold;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 600px) {
+    input[type="text"] {
+        width: 100%; /* Adjust input field width for smaller screens */
+    }
+}
