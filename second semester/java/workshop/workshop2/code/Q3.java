@@ -32,5 +32,6 @@ public class Q3 {
         }else{
             System.out.println("The "+Grades +" % in Grading System  is : Fail");
         }
+        input.close();
     }
 }

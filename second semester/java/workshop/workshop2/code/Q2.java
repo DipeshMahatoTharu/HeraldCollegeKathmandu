@@ -4,19 +4,20 @@ public class Q2 {
     public static void main(String[] args) {
          
 
-        Scanner sc =new Scanner(System.in);
+        Scanner input =new Scanner(System.in);
         
        int number, i ;
         System.out.print("Enter the multiplicaiton table  you want : ");
-        number=sc.nextInt();
+        number=input.nextInt();
 
         for(i =1; i<=10 ;i++){
             System.out.println(number+ "*" + i +"=" + (number*i));
             
         }
 
-        sc.close();
-       
+  
+      input.close(); 
     }
  
+    
 }
