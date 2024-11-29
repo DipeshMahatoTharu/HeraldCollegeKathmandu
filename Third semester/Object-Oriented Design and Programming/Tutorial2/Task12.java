@@ -9,10 +9,10 @@ class Rectangle extends Shape{
     }
     //Use super() to initialize the color attribute in the Rectangle constructor.
 
-    public Rectangle(String color,double length,double width){
+    public Rectangle(double length,double width){
         this.length=length;
         this.width=width;
-        System.out.println(super.color);
+        this.color=super.color;
         
     }
 
@@ -24,13 +24,14 @@ class Rectangle extends Shape{
 }
 public class Task12 {
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle("red",21,21);
+        Rectangle rectangle = new Rectangle(21,21);
         rectangle.area();
     
         double result =rectangle.calculate();
-
+        rectangle.color="red";
         System.out.println("The output is :"+result);
-        System.out.println(rectangle.color);
+        System.out.println("colour "+ rectangle.color);
+      
 
 
     }
