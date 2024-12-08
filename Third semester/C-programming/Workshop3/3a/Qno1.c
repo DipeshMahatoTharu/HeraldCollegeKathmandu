@@ -15,7 +15,8 @@
  }else{
     max=*p2;
  }
- printf("Maximum is :%d ",max);
+ //printf("Maximum is :%d ",max);
+ printf("%d",*p1);
 
 
  }
