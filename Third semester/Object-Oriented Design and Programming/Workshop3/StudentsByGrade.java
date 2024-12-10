@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,10 +41,13 @@ class Students1 {
 
 public class StudentsByGrade {
     public static void main(String[] args) {
-        String fileName = "students.csv"; // Input CSV file
-        List<Students1> students1 = new ArrayList<>();
+        String fileName = "students.csv"; // File to store student data
 
-        // Read the CSV file
+        // Step 1: Create the CSV file with sample data
+        createCSVFile(fileName);
+
+        // Step 2: Read the CSV file and store data in a list
+        List<Students1> students1 = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             // Skip the header
@@ -52,8 +57,8 @@ public class StudentsByGrade {
                 String[] data = line.split(",");
                 if (data.length == 3) { // Ensure there are three fields: name, age, grade
                     String name = data[0];
-                    int age = Integer.parseInt(data[1]);
-                    String grade = data[2];
+                    int age = Integer.parseInt(data[1].trim());
+                    String grade = data[2].trim();
                     students1.add(new Students1(name, age, grade));
                 }
             }
@@ -63,15 +68,15 @@ public class StudentsByGrade {
             return;
         }
 
-        // Group students by grade
+        // Step 3: Group students by grade
         Map<String, List<Students1>> studentsByGrade = new HashMap<>();
         for (Students1 student : students1) {
             studentsByGrade
-                .computeIfAbsent(student.getGrade(), k -> new ArrayList<>())
-                .add(student);
+                    .computeIfAbsent(student.getGrade(), k -> new ArrayList<>())
+                    .add(student);
         }
 
-        // Display students grouped by grade
+        // Step 4: Display students grouped by grade
         System.out.println("Students grouped by grade:");
         for (Map.Entry<String, List<Students1>> entry : studentsByGrade.entrySet()) {
             String grade = entry.getKey();
@@ -81,6 +86,20 @@ public class StudentsByGrade {
             for (Students1 student : studentsInGrade) {
                 System.out.println("  " + student);
             }
+        }
+    }
+
+    // Function to create a CSV file with sample student data
+    private static void createCSVFile(String fileName) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+            writer.println("Name,Age,Grade"); // Header
+            writer.println("Dipesh,14,A");
+            writer.println("Roshan,15,B");
+           
+            System.out.println("CSV file created successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while creating the file.");
+            e.printStackTrace();
         }
     }
 }
