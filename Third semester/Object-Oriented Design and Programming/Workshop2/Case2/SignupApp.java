@@ -1,8 +1,4 @@
-
-
-
 package Case2;
-
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -74,25 +70,22 @@ public class SignupApp {
             System.out.println("Full name must be greater than four characters. Please try again.");
         }
 
-     // Mobile number validation
-   
-while (true) {
-    System.out.print("Please enter your mobile number (username): ");
-    mobileNumber = scanner.nextLine().trim(); // Trim to remove any extra spaces
-    if (mobileNumber.matches("^\\+977\\d{9}$")) {
-        break;
-    }
-    System.out.println("Mobile number must have 10 digits and start with +977. Please try again.");
-}
-
-
+        // Mobile number validation
+        while (true) {
+            System.out.print("Please enter your mobile number (username): ");
+            mobileNumber = scanner.nextLine().trim();
+            if (mobileNumber.matches("^\\+977\\d{10}$")) {
+                break;
+            }
+            System.out.println("Mobile number must have 10 digits and start with +977. Please try again.");
+        }
 
         // Password validation
         while (true) {
             System.out.print("Please enter your password: ");
             password = scanner.nextLine();
-            if (password.matches("^[A-Z][@&].*\\d$")) break;
-            System.out.println("Password must start with a capital letter, contain @ or &, and end with a number. Please try again.");
+            if (password.matches("^[A-Z](?=.*[@&])(?=.*\\d).+$")) break;
+            System.out.println("Password must start with a capital letter, contain @ or &, and include a number. Please try again.");
         }
 
         // Password confirmation
