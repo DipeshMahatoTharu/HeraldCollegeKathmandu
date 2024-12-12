@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*
 // Function to calculate sum, multiplication, quotient, subtraction, and minimum
 void calculator(int *a, int *b, int *c, int *sum, int *mul, int *quotient, int *diff, int *min) {
 
@@ -46,3 +47,41 @@ int main() {
 
     return 0;
 }
+*/
+
+// Function to calculate sum, multiplication, quotient, subtraction, and minimum
+
+void calculator(int *a,int *b,int *c,int *sub,int *mul,int *sum,int *min,int *quo){
+    *sum=*a+*b+*c;
+    *sub=*a-*b-*c;
+    *mul=(*a)*(*b)*(*c);
+    if(a)
+    if(*a<*b && *a<*c){
+        min=*a;
+    }else if(*b<*c && *b<*a){
+        *min=*b;
+    }else{
+        *min=*c;
+    }
+    if(*b !=0 && *c !=0){
+        *quo=*a / *b / *c;
+    }else{
+        *quo=0;
+    }
+}
+int main(){
+int a,b,c,min,add,sub,mul,quo;
+printf("Enter the first , second number and etc :");
+scanf("%d""%d""%d",&a,&b,&c);
+
+calculator(&a,&b,&c,&sub,&mul,&sub,&min,&quo);
+printf("The mul is : %d\n",mul);
+printf("The sub is : %d\n",sub);
+printf("The min is : %d\n",min);
+printf("The quo is : %d\n",quo);
+}
+
+
+
+
+
