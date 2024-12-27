@@ -1,3 +1,10 @@
+/*Definition:
+The Interface Segregation Principle states that no client should be forced to depend on methods it does not use.
+ Interfaces should be small and specific.
+
+Multiple Inheritance in Java:
+Java allows multiple inheritance through interfaces. ISP ensures each interface represents a specific behavior, 
+enabling clean multiple inheritance.*/
 interface Flyable {
     void fly();
 }

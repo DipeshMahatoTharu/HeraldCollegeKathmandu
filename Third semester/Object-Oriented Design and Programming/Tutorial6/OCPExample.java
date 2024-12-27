@@ -1,3 +1,5 @@
+/*The Open/Closed Principle (OCP) states that a class should be open for extension but closed for modification.
+ This means we should be able to add new functionality without changing the existing code.*/
 abstract class Shape {
     abstract void draw();
 }

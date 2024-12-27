@@ -1,3 +1,6 @@
+/*When a class handles multiple responsibilities, such as data representation and data persistence, 
+changes in one responsibility might affect the other. 
+This leads to tightly coupled code that is harder to maintain and extend.*/
 class UserWithPersistence {
     private String name;
     private String email;

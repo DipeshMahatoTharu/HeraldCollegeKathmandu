@@ -1,3 +1,4 @@
+/*The Bird interface forces Penguin to implement a fly method it cannot logically support, violating ISP.*/
 interface Bird {
     void fly();
     void swim();
